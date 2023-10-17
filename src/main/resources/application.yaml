@@ -3,4 +3,16 @@ server:
 spring:
   kafka:
     bootstrap-servers: localhost:9094
+    producer:
+      topic: wikimedia
+      source-url: https://stream.wikimedia.org/v2/stream/recentchange
 
+rapid-api:
+  X-RapidAPI-KEY: 050015dc63mshfcac49c997e32e5p1a87e3jsn2e95f84c5e66
+  X-RapidAPI-HOST: gold-price6.p.rapidapi.com
+  endpoints:
+    get-gold: https://gold-price6.p.rapidapi.com/GetGold?CUR=EUR
+  currencies:
+    euro: EUR
+    dollar: USD
+    swiss-franc: CHF

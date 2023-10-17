@@ -1,4 +1,4 @@
-package com.example.kafkastreams;
+package com.manueljuncal.wikimedia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

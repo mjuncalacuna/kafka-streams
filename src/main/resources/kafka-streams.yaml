@@ -14,6 +14,7 @@ paths:
         - Producer Manager
       summary: Activate or deactivate the producer
       description: Activate or deactivate the producer
+      operationId: producerToggle
       parameters:
         - in: query
           name: action
@@ -32,6 +33,52 @@ paths:
                   status:
                     type: string
                     example: Producer activated successfully
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid action provided
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Unexpected error occurred
+                    
+  /consumer:
+    post:
+      tags:
+        - Consumer Manager
+      summary: Activate or deactivate the consumer
+      description: Activate or deactivate the consumer
+      operationId: consumerToggle
+      parameters:
+        - in: query
+          name: action
+          required: true
+          schema:
+            type: string
+            enum: [ activate, deactivate ]
+      responses:
+        '200':
+          description: Successfully performed action on consumer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Consumer activated successfully
         '400':
           description: Invalid input
           content:

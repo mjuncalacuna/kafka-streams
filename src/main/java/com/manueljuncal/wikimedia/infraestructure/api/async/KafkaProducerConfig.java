@@ -1,4 +1,4 @@
-package com.example.kafkastreams.producer;
+package com.manueljuncal.wikimedia.infraestructure.api.async;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
